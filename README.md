@@ -1,1 +1,298 @@
 # Divination
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- SwamiG Institute — Divination  Four Cowrie Shell PreLesson 0.0 -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SwamiG Institute — Four Cowrie Shell — PreLesson 0.0</title>
+  <meta name="description" content="PreLesson 0.0 for the Four Cowrie Shell course by SwamiG Institute. Motivation, cowrie basics, asking questions, orientation, casting/response, and optional assignment." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg:#0b0b0f;
+      --bg-elev:#11131a;
+      --text:#e9ecf1;
+      --muted:#b8c0cc;
+      --gold:#d4af37;
+      --gold-2:#b9962f;
+      --ring:rgba(212,175,55,.35);
+      --line:#1a1d25;
+      --radius:18px;
+      --shadow:0 10px 30px rgba(0,0,0,.35),0 2px 10px rgba(0,0,0,.25);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font:400 16px/1.65 Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background: radial-gradient(1200px 800px at 10% -10%, rgba(212,175,55,.08), transparent 50%),
+                  radial-gradient(900px 700px at 110% 10%, rgba(157,181,203,.07), transparent 50%),
+                  var(--bg);
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+    a{color:var(--gold); text-decoration:none; cursor:pointer}
+    a:hover{text-decoration:underline}
+
+    .container{width:min(1100px,92vw); margin-inline:auto}
+
+    header{position:sticky; top:0; z-index:40; backdrop-filter:saturate(1.1) blur(8px); background:linear-gradient(180deg, rgba(11,11,15,.92), rgba(11,11,15,.6)); border-bottom:1px solid var(--line)}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--text)}
+    .brand img{height:42px; width:auto; border-radius:999px; box-shadow:0 1px 5px rgba(0,0,0,.35)}
+    .brand .title{font-weight:800; letter-spacing:.3px}
+    .brand .subtitle{font-size:12px; color:var(--muted); margin-top:-4px}
+
+    .navlinks{display:flex; gap:18px; align-items:center}
+    .chip{display:inline-flex; align-items:center; gap:8px; font-size:12px; color:var(--muted); border:1px dashed #262a35; padding:6px 10px; border-radius:999px}
+
+    .cta{background:linear-gradient(180deg, var(--gold), var(--gold-2)); color:#0a0a0a; border:0; padding:10px 14px; border-radius:12px; font-weight:800; letter-spacing:.3px; cursor:pointer; box-shadow:var(--shadow)}
+    .cta:focus{outline:3px solid var(--ring)}
+
+    .hero{display:grid; grid-template-columns:1.15fr .85fr; gap:28px; align-items:center; padding:48px 0 24px}
+    .hero figure{margin:0; border-radius:var(--radius); overflow:hidden; border:1px solid var(--line); background:var(--bg-elev)}
+    .hero figure img{display:block; width:50%; height:auto; margin:auto; object-fit:cover}
+
+    h1{font:800 clamp(28px,5vw,42px)/1.15 "Libre Baskerville",serif; margin:.2em 0 .35em}
+    .lead{color:var(--muted)}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015)); border:1px solid var(--line); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow)}
+
+    section{scroll-margin-top:84px; padding:28px 0}
+    .section-title{display:flex; align-items:center; justify-content:space-between; margin-bottom:12px}
+    .section-title h2{font:800 22px/1.2 "Libre Baskerville",serif; margin:0}
+
+    .list{display:grid; gap:10px; margin:10px 0 0}
+    .list li{list-style:none; padding:10px 12px; border:1px solid var(--line); border-radius:12px; background:rgba(255,255,255,.02)}
+
+    .table-wrap{overflow:auto; border-radius:16px; border:1px solid var(--line)}
+    table{width:100%; border-collapse:collapse; background-color:var(--bg-elev)}
+    th, td{padding:12px 14px; text-align:left; vertical-align:top}
+    th{position:sticky; top:0; backdrop-filter: blur(4px); background:rgba(18,19,26,.85); font-weight:700; letter-spacing:.02em}
+    tr:nth-child(even){background:rgba(255,255,255,.02)}
+
+    .callout{border:1px solid var(--ring); background: linear-gradient(180deg, rgba(212,175,55,.06), rgba(212,175,55,.02)); color:var(--text); padding:16px; border-radius:14px}
+    .tiny{font-size:.85rem; color:var(--muted)}
+
+    /* Sticky mobile TOC */
+    .mobile-toc{position:fixed; left:0; right:0; bottom:10px; z-index:60; display:flex; gap:8px; overflow:auto; padding:8px 10px; background:linear-gradient(180deg, rgba(11,11,15,.85), rgba(11,11,15,.75)); border-top:1px solid var(--line)}
+    .mobile-toc .chip{white-space:nowrap}
+    @media (min-width: 921px){ .mobile-toc{display:none} }
+
+    footer{border-top:1px solid var(--line); margin-top:40px; padding:28px 0 40px; color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <img src="http://myoracle.itgo.com/SwamiG.gif" alt="SwamiG Institute logo" loading="lazy" />
+        <div>
+          <div class="title">SwamiG Institute</div>
+          <div class="subtitle">Ifá • Isésé • Orisha</div>
+        </div>
+      </a>
+      <nav class="navlinks">
+        <a class="chip" href="#motivation">Motivation</a>
+        <a class="chip" href="#cowrie">Cowrie Snail</a>
+        <a class="chip" href="#questions">Asking Questions</a>
+        <a class="chip" href="#orientation">Orientation</a>
+        <a class="chip" href="#casting">Casting/Response</a>
+        <a class="chip" href="#assignment">Assignment</a>
+      </nav>
+      <button class="cta" id="bookBtn">Book a Session</button>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <div class="hero">
+      <div class="card">
+        <h1>PreLesson 0.0</h1>
+        <p class="lead">Foundations of the Four Cowrie Shell system: forming potent yes/no questions, recognizing orientations, and interpreting the five cast families.</p>
+      </div>
+      <figure>
+        <img src="http://myoracle.itgo.com/BeardedSwamiG.gif" alt="SwamiG — Four Cowrie study" loading="lazy" />
+      </figure>
+    </div>
+
+    <!-- Motivation -->
+    <section id="motivation">
+      <div class="section-title">
+        <h2>Motivation</h2>
+      </div>
+      <div class="grid" style="grid-template-columns:1fr; gap:18px">
+        <div class="card">
+          <p>This course is for seekers who recognize that blessings may appear as calamity, disaster, or delay. Access to the uncompromising can reveal the sacredness of our relationship to these seeming distractions. Transforming distraction into blessedness nourishes self&#8209;realization.</p>
+          <p>Enlightenment is not what it appears to be, yet it is beneficial. Self&#8209;realization is temporal. This course may serve as a tool to pierce the veil of the One Truth. It promotes a conscious triangulation of inner knowing, Spirit, and the 3&#8209;D plane—creating a portal that may, or may not, lead toward enlightenment. The journey matters more than destination.</p>
+          <ul class="list">
+            <li>Stimulates deeper insights and broader perspectives.</li>
+            <li>Compels clarity of purpose and recommitment to what matters most.</li>
+            <li>Provides a baseline for intuitive expression within an ancestral frame.</li>
+            <li>Sifts adornment from alignment. This offering precedes the beginning.</li>
+          </ul>
+        </div>
+        <aside class="callout">
+          <strong>Five Responses.</strong>
+          <p>“Yes; Probably yes; Definitely; Probably no; Definitely no.” These responses are echoed in Yoruba and other culturally rooted oracles and are foundational to Four Cowrie Shell practice.</p>
+        </aside>
+      </div>
+      <div class="container" style="margin-top:12px"><a class="chip" href="#top">Back to top &#8593;</a></div>
+    </section>
+
+    <!-- Cowrie -->
+    <section id="cowrie">
+      <div class="section-title"><h2>Cowrie Snail</h2></div>
+      <div class="card">
+        <p><em>What is a cowrie?</em> Cowrie (or cowry) refers to marine gastropods in the family <span style="font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace">Cypraeidae</span>. In diaspora spellings vary; we use them interchangeably. When traveling, the shell’s opening (ventral side) faces the earth; the foot contacts the earth and its ridges (often called “teeth”) can be metaphorically considered a mouth in spiritual use.</p>
+        <p>The animal is the cowrie; the empty shell is a cowrie shell. This course focuses on shells as instruments.</p>
+      </div>
+      <div class="container" style="margin-top:12px"><a class="chip" href="#top">Back to top &#8593;</a></div>
+    </section>
+
+    <!-- Asking Questions -->
+    <section id="questions">
+      <div class="section-title"><h2>Asking Questions</h2></div>
+      <div class="grid" style="grid-template-columns:1fr 1fr; gap:18px">
+        <div class="card">
+          <p>Ask only well&#8209;formed yes/no questions. Avoid:</p>
+          <ul>
+            <li>Questions with answers already known</li>
+            <li>Questions that harm the environment, others, or the questioner</li>
+            <li>Questions already asked; those illegal or immoral</li>
+          </ul>
+          <p>The shells answer precisely what is asked—no more. Interpretation rests with the questioner.</p>
+          <p><strong>Well&#8209;formed example:</strong> “Should I accept the new position offered at work today?”</p>
+          <p><strong>Ill&#8209;formed example:</strong> “Should I accept the new position today or wait for a better opportunity?”</p>
+          <p class="tiny">First Law of Thermodynamics (paraphrased): <em>Garbage in = Garbage out.</em></p>
+        </div>
+        <aside class="callout">
+          <strong>Elements &amp; Substitutions</strong>
+          <p>When four shells are cast they may be called <em>Obi</em>. Coins, pebbles, or buttons can substitute; establish dorsal/ventral equivalence first. Sacred objects may keep the term <em>Obi</em>; otherwise call them <em>elements</em>.</p>
+        </aside>
+      </div>
+      <div class="container" style="margin-top:12px"><a class="chip" href="#top">Back to top &#8593;</a></div>
+    </section>
+
+    <!-- Orientation -->
+    <section id="orientation">
+      <div class="section-title"><h2>Orientation</h2></div>
+      <div class="grid" style="grid-template-columns:1fr 1fr; gap:18px">
+        <article class="card">
+          <h3>Skyward (open mouth)</h3>
+          <p>Ventral face toward the observer. Associated with success.</p>
+        </article>
+        <article class="card">
+          <h3>Earthward (closed mouth)</h3>
+          <p>Ventral face away from the observer. Success after struggle—must travel through the earth.</p>
+        </article>
+      </div>
+      <div class="container" style="margin-top:12px"><a class="chip" href="#top">Back to top &#8593;</a></div>
+    </section>
+
+    <!-- Casting -->
+    <section id="casting">
+      <div class="section-title"><h2>Casting &amp; Response</h2></div>
+      <p>There are five possible cast families when four shells are thrown:</p>
+      <div class="table-wrap" role="region" aria-label="Casting results table with interpretations">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Casting (open / closed)</th>
+              <th scope="col">Response</th>
+              <th scope="col">Orientation • Governing Principle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Alafia</strong></td>
+              <td>4 open (all shells same side)</td>
+              <td><strong>Yes</strong>, with a blessing.</td>
+              <td>Iwa&#8209;Pele (+)</td>
+            </tr>
+            <tr>
+              <td><strong>Etawa</strong></td>
+              <td>3 open / 1 closed</td>
+              <td><strong>Probably</strong> — rephrase with a single suggestion on how to proceed. Next throw is the answer.</td>
+              <td>Know Thyself</td>
+            </tr>
+            <tr>
+              <td><strong>Ejife</strong></td>
+              <td>2 open / 2 closed</td>
+              <td><strong>Definitely</strong> — with a blessing of wisdom, even if there is minor struggle.</td>
+              <td>Living in Alignment With Absolute Truth</td>
+            </tr>
+            <tr>
+              <td><strong>Okanran</strong></td>
+              <td>1 open / 3 closed</td>
+              <td><strong>Probably not</strong> — possible misunderstanding; rephrase from a different perspective.</td>
+              <td>Cleanse and Purify</td>
+            </tr>
+            <tr>
+              <td><strong>Oyeku</strong></td>
+              <td>0 open (all shells other side)</td>
+              <td><strong>Definitely No</strong> — refresh shells and change the line of questions. If it falls twice in sequence, consult a higher level of divination.</td>
+              <td>Iwa&#8209;Pele (&#8722;)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="container" style="margin-top:12px"><a class="chip" href="#top">Back to top &#8593;</a></div>
+    </section>
+
+    <!-- Assignment -->
+    <section id="assignment">
+      <div class="section-title"><h2>Optional Pre&#8209;Initiation Assignment</h2></div>
+      <div class="card">
+        <p>Practice casting Four Cowrie Shells <strong>500+</strong> times within a lunar cycle to build confidence and trust in the higher self. Document and name each cast.</p>
+        <p class="tiny">Advanced seekers may submit documentation for comment and review. Submissions close after two lunar cycles.</p>
+      </div>
+      <div class="container" style="margin-top:12px"><a class="chip" href="#top">Back to top &#8593;</a></div>
+    </section>
+  </main>
+
+  <!-- Sticky mobile TOC -->
+  <nav class="mobile-toc" aria-label="Mobile section navigation">
+    <a class="chip" href="#motivation">Motivation</a>
+    <a class="chip" href="#cowrie">Cowrie</a>
+    <a class="chip" href="#questions">Questions</a>
+    <a class="chip" href="#orientation">Orientation</a>
+    <a class="chip" href="#casting">Casting</a>
+    <a class="chip" href="#assignment">Assignment</a>
+    <a class="chip" href="#top">Top &#8593;</a>
+  </nav>
+
+  <footer>
+    <div class="container">
+      <div>© 2025 SwamiGInstitute.com  • Four Cowrie Shell — PreLesson 0.0    •    $DrSwamiG</div>
+      <div class="tiny">Governed by [Herukhuti(&#8722;)/Tehuti Hetep] / [Oturupon/Edi(+)
+        Ausar(Oshe)]</div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth-scroll functional top links
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) target.scrollIntoView({behavior:'smooth'});
+      });
+    });
+
+    // Calendly booking
+    const calendly = 'https://calendly.com/awoswamig/30min';
+    const b1 = document.getElementById('bookBtn');
+    b1 && b1.addEventListener('click', () => {
+      window.open(calendly, 'cal', 'width=960,height=720');
+    });
+  </script>
+</body>
+</html>
